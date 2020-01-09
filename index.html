@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Solid Share</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/share.js" defer></script>
+    <script src="/common.js" defer></script>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4a148c">
+  </head>  
+  <body>
+    <h1>
+      Solid Share API
+    </h1>
+    <p id="requireHTTPS" class="hidden">
+      <b>STOP!</b> This page <b>must</b> be served over HTTPS.
+      Please <a>reload this page via HTTPS</a>.
+    </p>
+
+    <p>
+      The Solid Share API, allows sites to share links and text to other
+      apps via the system provided share picker.
+    </p>
+    
+    <p id="notSupported">
+      <b>Sorry!</b> This browser doesn't support the Solid Share API,
+      which required for this demo.
+    </p>  
+    
+<pre>
+const shareOpts = {
+  title: 'Melvin Carvalho Home Page',
+  text: 'Check out the home page of Melvin Carvalho.',
+  url: 'https://melvincarvalho.com/',
+};
+navigator.share(shareOpts);
+</pre>
+    
+    <p>
+      <button type="button" id="butShare" disabled>
+        Share
+      </button>
+    </p>
+    
+    <div id="divResult">
+      
+    </div>
+  </body>
+</html>
